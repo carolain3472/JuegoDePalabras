@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>200</y>
+      <w>380</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>ReglasDelJuego
+--
+Atributos 
+--
+FileReader  archivoTodasLasPalabras,archivoPalabrasUsar
+BufferedReader  archivoTodasLasPalabrasB,
+lecturaPalabrasUsar
+FileWriter  palabrasAValidarIngresadas
+BufferedWriter  palabrasAValidarIngresadasB
+Int palabras, ronda, puntos
+ArrayList palabrasValidacion
+--
+Metodos: 
+--
+-leerPalabras()
+-escribirPalabrasRonda()
+-escribirArchivoValidación()
+-establecerReglasJuego()
+-cambiarRonda() 
+-numeroPalabrasRonda()
+-iniciarserie2() 
+-validarPalabra()
+-aumentarPunto()
+-mezclarPalabras()
+-ponerEnarrayPalabras()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>290</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>PrincipalJuego
+--
+Atributos
+--
+Metodos
+--
+main()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>140</y>
+      <w>270</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>VistaGUI
+--
+Atributos
+--
+JPanel inicial, ventana
+JButton inicio, salir, cambiarSerie, validar
+JtextFiel palabras
+Escucha escucha
+Timer serie1, serie2
+ReglasDelJuego reglas
+
+
+--
+Metodos
+--
+initGUI()
+panelInicial()
+cambiarRonda()
+elementosIniciales()
+ventanasEmergentes()
+serializar()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>250</y>
+      <w>120</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>260</y>
+      <w>110</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>90.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1060</x>
+      <y>100</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+Package::FatClass
+{Some Properties}
+--
+-id: Long
+_-ClassAttribute: Long_
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>540</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Jugador</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>550</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Serializar</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
